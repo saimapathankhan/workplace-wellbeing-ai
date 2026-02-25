@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happiness Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="dark">
+
+<div class="container">
+    <h2 class="title">😊 Happiness Score Prediction</h2>
+
+    <form action="/predict_happiness" method="POST" class="card">
+
+        <label>Income Level</label>
+        <input type="number" name="income" required>
+
+        <label>Sleep Hours</label>
+        <input type="number" name="sleep_hours" required>
+
+        <label>Social Support (1-10)</label>
+        <input type="number" name="social_support" required>
+
+        <label>Gratitude Level (1-10)</label>
+        <input type="number" name="gratitude_level" required>
+
+        <label>Exercise Minutes (Daily)</label>
+        <input type="number" name="exercise_minutes" required>
+
+        <label>Stress Level (1-10)</label>
+        <input type="number" name="stress_level" required>
+
+        <button type="submit" class="btn">Predict Happiness</button>
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Burnout Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="dark">
+
+<div class="container">
+    <h2 class="title">🔥 Burnout Risk Prediction</h2>
+
+    <form action="/predict_burnout" method="POST" class="card">
+
+        <label>Work-life Balance (1-10)</label>
+        <input type="number" name="work_life_balance" required>
+
+        <label>Job Satisfaction (1-10)</label>
+        <input type="number" name="job_satisfaction" required>
+
+        <label>Sleep Hours</label>
+        <input type="number" name="sleep_hours" required>
+
+        <label>Stress Level (1-10)</label>
+        <input type="number" name="stress_level" required>
+
+        <label>Mental Health Score (1-10)</label>
+        <input type="number" name="mental_health_score" required>
+
+        <button type="submit" class="btn red">Predict Burnout</button>
+    </form>
+</div>
+
+</body>
+</html>
